@@ -13,8 +13,8 @@ import { PaymentDetailsComponent } from './payment-details/payment-details.compo
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  {path: '', component: LoginComponent},
-  {path: 'home', component: HomeComponent},
+  // {path: '', component: LoginComponent},
+  {path: '', component: HomeComponent},
   { path: 'events', component: EventsComponent },
   { path: 'payment/:id', component: PaymentDetailsComponent }
 ];
