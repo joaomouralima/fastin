@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-12">
+        <div class="text-center">
+            <h4>Eventos para você</h4>
+        </div>
+
+        <ul class="list-group">
+            <li *ngFor="let event of events" class="list-group-item">
+                <div class="row">
+                    <div class="col-4">
+                        <img [src]="event.image" width="100%">
+                    </div>
+                    <div class="col-8">
+                        <h5>{{event.title}}</h5>
+                        {{event.description}}
+                        <a [routerLink]="['/payment', event.id]">
+                            <button type="button" class="btn btn-sm btn-block btn-primary col-12">
+                                Conferir
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

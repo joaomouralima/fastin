@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card-deck">
+                <div class="card shadow-sm">
+                    <div class="card-header text-center">
+                        <h4 class="my-0 font-weight-normal">{{selectEvent.title}}</h4>
+                    </div>
+                    <div class="card-body" style="padding-top: 10px;">
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <span *ngFor="let icon of selectEvent.icons">
+                                    <fa-icon [icon]="icon" style="margin-right: 5px;"></fa-icon>
+                                </span>
+                            </div>
+                            <div class="col-6 text-center">
+                                Valor total:
+                                <span>
+                                    <h5 class="card-title pricing-card-title" style="color: green;">{{selectEvent.paymentValue}}</h5>
+                                    <!-- <h5 class="card-title pricing-card-title" style="color: green;">Você entrou</h5> -->
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <p style="margin-bottom: 0%;">Seu consumo:</p>
+                                <ul class="col-12 list-group">
+                                    <li *ngFor="let consumed of selectEvent.consumed" class="list-group-item" style="padding: 10px;">
+                                        {{consumed.item}}: <span style="color: red;">{{consumed.value}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-right text-center">
+                                    <img class="rounded-circle z-depth-2" alt="100x100" width="100%" [src]="url_avatar"
+                                    data-holder-rendered="true">
+                                    <div class="col-12 text-center" style="padding-top: 10px;">
+                                        <p>Elô</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center" style="margin-bottom: 20px; margin-top: 20px;">
+                            <img [src]="selectEvent.image" width="80%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
