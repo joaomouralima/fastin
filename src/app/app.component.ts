@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'PaymentX';
+  title = 'FastIn';
+  url_avatar = '../assets/avatar1.png'
 }
